@@ -148,7 +148,7 @@ viz.afghan.deaths.large <- function( out.name ) {
 
   plot( 
        csv.data.df$Year, csv.data.df$US,
-       ylim = c( 0, 800 ),
+       ylim = c( 0, 500 ),
        main = "US military deaths by year",
        xlab="", ylab = "",
        pch = 24, cex=3, col="black", bg="blue", lwd=2
