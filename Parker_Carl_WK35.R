@@ -104,6 +104,32 @@ csv.data.df <- read.csv(
                          comment.char="#" 
                        )
 
+pres <- c(
+          "Bush",
+          "Bush",
+          "Bush",
+          "Bush",
+          "Bush",
+          "Bush",
+          "Bush",
+          "Bush",
+          "Obama",
+          "Obama",
+          "Obama",
+          "Obama",
+          "Obama",
+          "Obama",
+          "Obama",
+          "Obama",
+          "Trump",
+          "Trump",
+          "Trump",
+          "Trump",
+          "Biden"
+          )
+
+csv.data.df <- cbind( csv.data.df, pres )
+
 #
 # --- Explore the data ---
 #
