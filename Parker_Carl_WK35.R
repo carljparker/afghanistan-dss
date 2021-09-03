@@ -207,6 +207,16 @@ viz.afghan.deaths.large <- function( out.name ) {
   title( xlab="Year", cex.lab = 3, line = 5 )
   title( ylab="Number of deaths", cex.lab = 3, line = 5 )
 
+  legend(
+          "bottomright", 
+          title = "Presidents",
+          bg = "white",
+          legend = levels( as.factor( csv.data.df$pres ) ),
+          pch = 24,
+          pt.cex = 3,
+          pt.bg = levels( as.factor( csv.data.df$color ) )
+        )
+
 }
 
 viz.afghan.deaths.large( "viz/afghanistan.deaths-large.png" )
