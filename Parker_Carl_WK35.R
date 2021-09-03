@@ -105,30 +105,54 @@ csv.data.df <- read.csv(
                        )
 
 pres <- c(
-          "Bush",
-          "Bush",
-          "Bush",
-          "Bush",
-          "Bush",
-          "Bush",
-          "Bush",
-          "Bush",
-          "Obama",
-          "Obama",
-          "Obama",
-          "Obama",
-          "Obama",
-          "Obama",
-          "Obama",
-          "Obama",
-          "Trump",
-          "Trump",
-          "Trump",
-          "Trump",
-          "Biden"
-          )
+          "Bush",    
+          "Bush",    
+          "Bush",    
+          "Bush",    
+          "Bush",    
+          "Bush",    
+          "Bush",    
+          "Bush",    
+          "Obama",   
+          "Obama",   
+          "Obama",   
+          "Obama",   
+          "Obama",   
+          "Obama",   
+          "Obama",   
+          "Obama",   
+          "Trump",   
+          "Trump",   
+          "Trump",   
+          "Trump",   
+          "Biden"    
+)
 
-csv.data.df <- cbind( csv.data.df, pres )
+color <- c(
+          "Red",   
+          "Red",   
+          "Red",   
+          "Red",   
+          "Red",   
+          "Red",   
+          "Red",   
+          "Red",   
+          "Blue",  
+          "Blue",  
+          "Blue",  
+          "Blue",  
+          "Blue",  
+          "Blue",  
+          "Blue",  
+          "Blue",  
+          "Orange",
+          "Orange",
+          "Orange",
+          "Orange",    
+          "Green"  
+)
+
+csv.data.df <- cbind( csv.data.df, pres, color )
 
 #
 # --- Explore the data ---
@@ -177,7 +201,7 @@ viz.afghan.deaths.large <- function( out.name ) {
        ylim = c( 0, 500 ),
        main = "US military deaths by year",
        xlab="", ylab = "",
-       pch = 24, cex=3, col="black", bg="blue", lwd=2
+       pch = 24, cex=3, col="black", bg=csv.data.df$color, lwd=2
   )
 
   title( xlab="Year", cex.lab = 3, line = 5 )
