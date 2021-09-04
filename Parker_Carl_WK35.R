@@ -200,7 +200,7 @@ viz.afghan.deaths.large <- function( out.name ) {
        csv.data.df$Year, csv.data.df$US,
        ylim = c( 0, 500 ),
        main = "US military deaths by year",
-       xlab="", ylab = "",
+       xlab = "", ylab = "",
        pch = 24, cex=3, col="black", bg=csv.data.df$color, lwd=2
   )
 
@@ -208,13 +208,13 @@ viz.afghan.deaths.large <- function( out.name ) {
   title( ylab="Number of deaths", cex.lab = 3, line = 5 )
 
   legend(
-          "bottomright", 
+          "topright", 
           title = "Presidents",
           bg = "white",
-          legend = levels( as.factor( csv.data.df$pres ) ),
+          legend = c( "Bush", "Obama", "Trump", "Biden" ),
           pch = 24,
           pt.cex = 3,
-          pt.bg = levels( as.factor( csv.data.df$color ) )
+          pt.bg = c( "Red", "Blue", "Orange", "Green" )
         )
 
 }
