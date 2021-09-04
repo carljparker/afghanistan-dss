@@ -1,0 +1,11 @@
+
+#
+# Don't accidentally commit visualizations
+#
+*.png
+*.jpg
+*.jpeg
+
+
+# --- END --- #
+
