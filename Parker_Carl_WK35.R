@@ -108,7 +108,7 @@ viz.afghan.deaths.large <- function( out.name ) {
           bg = "white",
           legend = c( "Bush", "Obama", "Trump", "Biden" ),
           pch = 24,
-          pt.cex = 3,
+          pt.cex = 2,
           pt.bg = c( "Red", "Blue", "Orange", "Green" )
         )
 
@@ -146,8 +146,8 @@ viz.afghan.deaths.tumblr <- function( out.name ) {
        xaxt = "n"  
   )
 
-  title( xlab="Year", cex.lab = 3, line = 5 )
-  title( ylab="Number of deaths", cex.lab = 3, line = 5 )
+  title( xlab="Year", cex.lab = 3, line = 4 )
+  title( ylab="Number of deaths", cex.lab = 3, line = 3 )
 
   #
   # Customize the x-axis
@@ -160,7 +160,7 @@ viz.afghan.deaths.tumblr <- function( out.name ) {
           bg = "white",
           legend = c( "Bush", "Obama", "Trump", "Biden" ),
           pch = 24,
-          pt.cex = 3,
+          pt.cex = 2,
           pt.bg = c( "Red", "Blue", "Orange", "Green" )
         )
 
