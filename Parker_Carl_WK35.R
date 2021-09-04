@@ -191,7 +191,7 @@ viz.afghan.deaths.large <- function( out.name ) {
   )
 
   par( 
-      cex.main = 4, cex.axis = 2.50, cex.lab = 3,
+      cex.main = 3, cex.axis = 2.50, cex.lab = 3,
       # margins: bottom, left, top and right
       par( mar = c( 10, 11, 8, 8 ) + 0.1 )  
   )
@@ -199,7 +199,7 @@ viz.afghan.deaths.large <- function( out.name ) {
   plot( 
        csv.data.df$Year, csv.data.df$US,
        ylim = c( 0, 500 ),
-       main = "US military deaths by year",
+       main = "US military deaths in Afghanistan by year",
        xlab = "", ylab = "",
        pch = 24, cex=3, col="black", bg=csv.data.df$color, lwd=2,
        # Remove the x-axis so we can customize it further below
