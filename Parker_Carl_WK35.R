@@ -201,11 +201,18 @@ viz.afghan.deaths.large <- function( out.name ) {
        ylim = c( 0, 500 ),
        main = "US military deaths by year",
        xlab = "", ylab = "",
-       pch = 24, cex=3, col="black", bg=csv.data.df$color, lwd=2
+       pch = 24, cex=3, col="black", bg=csv.data.df$color, lwd=2,
+       # Remove the x-axis so we can customize it further below
+       xaxt = "n"  
   )
 
   title( xlab="Year", cex.lab = 3, line = 5 )
   title( ylab="Number of deaths", cex.lab = 3, line = 5 )
+
+  #
+  # Customize the x-axis
+  #
+  axis( 1, at = seq(2001, 2021, 4 ), labels = seq(2001, 2021, 4 ) )
 
   legend(
           "topright", 
