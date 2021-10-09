@@ -171,5 +171,68 @@ viz.afghan.deaths.tumblr( "viz/afghanistan.deaths-tumblr.png" )
 dev.off()
 
 
+
+( deaths.obama  <- sum( csv.data.df[ csv.data.df$pres=="Obama", ]$US ) )
+( deaths.others <- sum( csv.data.df$US ) - deaths.obama )
+
+png( "viz/afghan-deaths-obama-vs-others.png", 
+      width = 1000, height = 750, 
+      units = "px", pointsize = 16, 
+      bg = rgb( 248, 245, 236, maxColorValue = 255 ) 
+)
+
+par( 
+    cex.main = 1.75, cex.axis = 1.10, cex.lab = 1.25,
+    # margins: bottom, left, top and right
+    par( mar = c( 6, 7, 4, 4 ) + 0.1 )  
+)
+
+x <- barplot( 
+        c( deaths.obama, deaths.others ),  names = c( "Obama", "Others"), 
+        main = "US military deaths in Afghanistan: Obama vs other presidents",
+        ylim = c( 0, 2000 ), xlab="", ylab="", 
+        col = c( "blue", "orange" ) 
+) 
+
+title( xlab="President", cex.lab = 2, line = 3 )
+title( ylab="Number of deaths", cex.lab = 2, line = 3 )
+
+# ( y.loc <- csv.data.sort.df$delta.percent + 0.1 )
+# 
+# text( x[ , 1], y.loc, paste( round( csv.data.sort.df$delta.percent, 2 ), "%", sep = "" ) )
+
+dev.off()
+
+
+#
+# We need to reconfigure values for png and par. Otherwise, the
+# previously configured values (from above) continue to prevail.
+#
+png( "viz/afghan-deaths-obama-vs-others-tumblr.png", 
+      width = 500, height = 375, 
+      units = "px", pointsize = 9, 
+      bg = rgb( 248, 245, 236, maxColorValue = 255 ) 
+)
+
+par( 
+    cex.main = 1.5, cex.axis = 1, cex.lab = 1,
+    # margins: bottom, left, top and right
+    par( mar = c( 4, 4, 4, 4 ) + 0.1 )  
+)
+
+x <- barplot( 
+        c( deaths.obama, deaths.others ),  names = c( "Obama", "Others"), 
+        main = "US military deaths in Afghanistan: Obama vs other presidents",
+        ylim = c( 0, 2000 ), xlab="", ylab="", 
+        col = c( "blue", "orange" ) 
+) 
+
+title( xlab="President", cex.lab = 1.5, line = 2 )
+title( ylab="Number of deaths", cex.lab = 1.5, line = 2 )
+
+
+dev.off()
+
+
 # --- END --- #
 
